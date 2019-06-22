@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Blue team project 1</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Project 1</h1>
+            <p>Our project idea is to use a retailers sku number and then compare it to the sku number on amazon</p>
+        </div>
+    </div>
+    <!-- inputs for product numbers -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <label for="upc">UPC Numbers</label>
+                <input class="form-control" id="upcInput" type="text">
+            </div>
+            <div class="col-xs-4">
+                <label for="sku">SKU Numbers</label>
+                <input class="form-control" id="skuInput" type="text">
+            </div>
+            <div class="col-xs-4">
+                <label for="dpic">DPIC Numbers</label>
+                <input class="form-control" id="dpicInput" type="text">
+            </div>
+        </div>
+        <br>
+        <!-- Walmart and Amazon image return headers -->
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="walmartHeader">
+                    <!-- <div id="main" style="width: 320px; height: 400px;"> -->
+                    <img src="images\walmartHeader.png" height="200" />
+                </div>
+            </div>
+            <div class="amazonHeader">
+                <img src="images\amazonHeader.png" height="200" />
+            </div>
+        </div>
+    </div>
+    <!-- Product item images from each website -->
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="walmartProdImage"></div>
+            <div class="amazonProdImage"></div>
+        </div>
+    </div>
+    <!-- Product item price from each website -->
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="walmartPrice"></div>
+            <div class="amazonPrice"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- return pricing and images of product comparison -->
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+
+</html>
