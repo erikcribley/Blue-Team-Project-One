@@ -8,7 +8,9 @@ $('button').on("click", function loadDoc() {
     console.log(queryURL)
 // ====== need to pull a response from a book
     $.ajax({
-        url: queryURL
+        url: queryURL,
+        
+    })then.(function(response){
+
     })
 })
-// 
