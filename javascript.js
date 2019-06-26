@@ -1,4 +1,4 @@
-// Plain old JS up here
+// // Plain old JS up here
 $('button').on("click", function() {
     let response = $('select').val().trim()
     console.log(genre)
@@ -15,3 +15,5 @@ function loadDoc() {
     })
 
 }
+
+loadDoc()
