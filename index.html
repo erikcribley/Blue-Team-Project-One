@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="jumbotron text-center">
-            <h1 class="display-4 font-weight-bolder">NY Times Best Selling List api</h1>
+            <h1 class="display-4 font-weight-bolder">NY Times: Read This</h1>
             <!-- <p class="lead">In our project are using ajax to call on the New York Times api. When we get the information
                 back from the api, we will show a book cover, title, author, plot and then a link to where you can find
                 the book for purchase.</p> -->
@@ -23,7 +23,7 @@
         <div class="card">
             <h5 class="card-header">Select a Genre</h5>
             <div class="card-body">
-                <select class="form-control">
+                <select class="form-control" id="genreDropdown">
                     <option>Fiction</option>
                     <option>Non-Fiction</option>
                     <option>Science Fiction</option>
@@ -36,6 +36,7 @@
             </div>
         </div>
     </div>
+    <div class="bookReturn"></div>
 
     <!-- Links to other pages -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -1,7 +1,9 @@
+body {
+    background: url("images/interlaced.png")
+}
+
 .jumbotron {
     background: url("images/bookshelf.jpg");
     background-size: contain;
     color: #ffffff;
-    
-
 }
