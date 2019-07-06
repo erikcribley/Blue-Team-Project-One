@@ -1,32 +1,46 @@
-var category = ''
+    const nytKey = "YYLM4H4ZVCvkU3CCEM6hMcTnfTjAP7DM"
+    const gbooksKey = "AIzaSyC6REeQDLquX9zbQZ_5qadkMoskhLlIHlg"
+    var queryURL = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=' + nytKey
 
-$('button').on("click", function loadDoc() {
-    let category = $('select').val().trim()
-    console.log(category)
-    var queryURL = "https://api.nytimes.com/svc/books/v3/lists/" + category + ".json?api-key=YYLM4H4ZVCvkU3CCEM6hMcTnfTjAP7DM"
-    console.log(queryURL)
-// ====== need to pull a response from a book
+
     $.ajax({
         url: queryURL,
-        method: "GET"
-    }).then(function(response){
-        console.log(response)
-        let genre = response.results.list_name;
-        let heading = $("<h2>")
-                .text(genre)
-        $(".bookReturn")
-            .append(heading)
-        for (i = 0; i < response.results.books.length; i++) {
-            let author = response.results.books[i].author
-            let title = response.results.books[i].title
-            let coverImage = response.results.books[i].book_image
-            let image = $("<img>")
-                .attr("src", coverImage)
-            let bookInfo = $("<p>")
-                .text(title + " by " + author)
-        $(".bookReturn")
-            .append(image)
-            .append(bookInfo)
-        }
+        method: 'GET',
+    }).then(function(response) {
+            console.log(response)
+            for (i = 0; i <= 14; i++) {        
+                var bookInfo = response.results.books[i].description
+                var lastRank = response.results.books[i].rank_last_week || 'Not Listed!'
+                var weeksOn = response.results.books[i].weeks_on_list || 'New Book!'
+                var rank = response.results.books[i].rank
+                var image = response.results.books[i].book_image
+                // window.isbn = response.results.books[i].isbns[1].isbn10
+                var listing =
+                    '<div id="' + rank + '" class="entry">' + 
+                        '<p>' + 
+                        '<img src=' + image + ' ' + 'class="book-cover" id="cover-' + rank + '">' + 
+                        '</p>' + 
+                        '<h2><a href="' + response.results.books[i].amazon_product_url + '" target="_blank">' + response.results.books[i].title + '</a></h2>' +
+                        '<h4>By ' + response.results.books[i].author + '</h4>' +
+                        '<h4 class="publisher">' + response.results.books[i].publisher + '</h4>' +
+                        '<p>' + bookInfo + '</p>' + 
+                        '<div class="stats">' +
+                        '<hr>' + 
+                        '<p>Last Week: ' + lastRank + '</p>' + 
+                        '<p>Weeks on list: ' + weeksOn + '</p>' +
+                        '</div>' +
+                    '</div>'
+
+                $('#best-seller-titles').append(listing);
+                $('#' + rank).attr('nyt-rank', rank);
+            }
     })
-})
+    // Change this and get it to Place the publisher in the listing as the NYT Publisher is wacky.
+    // $.ajax({
+    //    url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + window.isbn + "&key=" + gbooksKey,
+    //    method: 'GET',
+    // }).then(data => {
+    //     var img = data.items[0].volumeInfo.imageLinks.thumbnail;
+    //     img = img.replace(/^http:\/\//i, 'https://');
+    //     $('#cover-' + id).attr('src', img);
+    // })

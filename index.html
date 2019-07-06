@@ -5,65 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>NY Times: Fiction This</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-    <div class="container">
-        <div class="jumbotron text-center">
-            <h1 class="display-4 font-weight-bolder">NY Times: Read This</h1>
-            <!-- <p class="lead">In our project are using ajax to call on the New York Times api. When we get the information
-                back from the api, we will show a book cover, title, author, plot and then a link to where you can find
-                the book for purchase.</p> -->
-        </div>
-        <!-- find all the genres that nyt uses for books -->
-        <!-- <div class="card">
-            <h5 class="card-header">Select a Genre</h5>
-            <div class="card-body">
-                <select class="form-control" id="genreDropdown">
-                    <option value="fiction">Fiction</option>
-                    <option value="nonFiction">Non Fiction</option>
-                    <option value="scienceFiction">Science Fiction</option>
-                    <option value="mystery">Mystery</option>
-                    <option value="horror">Horror</option>
-                    <option value="selfImprovement">Self Improvement</option>
-                </select>
-                <br>
-                <button type="submit" class="btn btn-primary">Recommend Book</button>
-            </div>
-        </div>
-    </div> -->
-        <!-- other option -->
-        <div class="card">
-            <h5 class="card-header">Select a Catagory</h5>
-            <div class="card-body">
-                <select class="form-control" id="genreDropdown">
-                    <option value="hardcover-fiction">Hardcover Fiction</option>
-                    <option value="hardcover-nonfiction">Hardcover Nonfiction</option>
-                    <option value="paperback-nonfiction">Paperback Nonfiction</option>
-                    <!-- <option value="combined-print-ebook-fiction">Combined Print & E-Book Fiction</option> -->
-                    <option value="paperback-trade-fiction">Paperback Trade Fiction</option>
-                    <!-- <option value="advice-how-to-miscellanious">Advice, How-To & Miscellaneous</option> -->
-                </select>
-                <br>
-                <button type="submit" class="btn btn-primary">Recommend Book</button>
-            </div>
-        </div>
+  </head>
+
+  <body>
+    <div id="masthead">
+        <img src="images/nytimes-logo-png-new-york-times-logo-1250.png">
     </div>
-    <div class="bookReturn"></div>
 
-    <!-- Links to other pages -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div id="best-seller-titles">
+        <!-- Populate books here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
-</body>
-
+    <script  src="javascript.js"></script>
+  </body>
 </html>
