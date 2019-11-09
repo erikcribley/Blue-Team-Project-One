@@ -21,7 +21,7 @@
                 var weeksOn = response.results.books[i].weeks_on_list || 'New Book!'
                 var rank = response.results.books[i].rank
                 var image = response.results.books[i].book_image
-                // isbnBook = response.results.books[i].isbns[1].isbn10
+                isbnBook = response.results.books[i].isbns[1].isbn10
                 // console.log(isbnBook)
                 var listing =
                     '<div id="' + rank + '" class="entry">' + 
