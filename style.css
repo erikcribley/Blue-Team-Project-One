@@ -94,3 +94,8 @@
     height: auto;
     align-self: center;
 }
+
+#dropdown {
+  position: fixed;
+  margin-left: 20px;
+}
