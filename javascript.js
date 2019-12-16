@@ -1,6 +1,7 @@
     const nytKey = "YYLM4H4ZVCvkU3CCEM6hMcTnfTjAP7DM"
     const gbooksKey = "AIzaSyC6REeQDLquX9zbQZ_5qadkMoskhLlIHlg"
-    var queryURL = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=' + nytKey
+    let category = $("#dropdown").val()
+    var queryURL = 'https://api.nytimes.com/svc/books/v3/lists/current/' + category + '.json?api-key=' + nytKey
     var isbnBook = 0
 
     // function callback(response) {
