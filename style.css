@@ -98,4 +98,9 @@
 #dropdown {
   position: fixed;
   margin-left: 20px;
+  display: block;
+}
+
+button {
+  margin-top: 5px;
 }
