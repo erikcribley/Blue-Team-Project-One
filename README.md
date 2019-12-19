@@ -10,8 +10,6 @@ The data is displayed through jQuery.
 
 The books are updated dynamically and are always up to date.
 
-Currently the app only displays the hardcover fiction list, but soon a drop down menu will be added allowing the user to cycle to different categories
-
 ![Screenshot](/images/fictionthis.png)
 
 https://erikcribley.github.io/Blue-Team-Project-One/

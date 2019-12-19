@@ -45,11 +45,11 @@
             return isbnBook
     })
     // Change this and get it to Place the publisher in the listing as the NYT Publisher is wacky.
-    // $.ajax({
-    //    url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbnBook + "&key=" + gbooksKey,
-    //    method: 'GET',
-    // }).then(function(loadPub) {
-    //     var publisher = response.items[0].volumeInfo.publisher
-    //     $('.publisher').text(publisher);
-    // })
+    $.ajax({
+       url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbnBook + "&key=" + gbooksKey,
+       method: 'GET',
+    }).then(function(loadPub) {
+        var publisher = response.items[0].volumeInfo.publisher
+        $('.publisher').text(publisher);
+    })
     
